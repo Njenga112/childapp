@@ -95,7 +95,6 @@ class Screen8(Screen):
     #     song.allow_stretch = True
     #     return song
     pass
-#changes
 
 
 class Screen9(Screen):
