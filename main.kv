@@ -1,0 +1,657 @@
+WindowManager:
+    Screen1:
+    Screen2:
+    Screen3:
+    Screen4:
+    Screen5:
+    Screen6:
+    Screen7:
+    Screen8:
+    Screen9:
+    Screen10:
+    Screen11:
+    Screen12:
+
+
+
+
+<Screen1>:
+    name: "one"
+    nam:nam
+    age:age
+    grade:grade
+    hobby:hobby
+    Image:
+        source: 'images/image2.jpg'
+        allow_stretch: True
+        keep_ratio: False
+
+    FloatLayout:
+        Label:
+            text: "CHILD LEARNING APP"
+            font_size: 32
+            pos_hint: {"center_x":0.5,"center_y":0.95}
+            bold:True
+            color: 0.5,0.5,1,0.9
+    GridLayout:
+        cols: 2
+        row_force_default:True
+        row_default_height: 100
+        minimum_height: 0.5
+
+
+
+        Label:
+        Label:
+
+        Label:
+            text: "NAME"
+            font_size: 32
+        TextInput:
+            id: nam
+            hint_text: "ENTER YOUR  NAME"
+            font_size: 32
+            multiline: False
+            background_color:0.5,0.5,1,0.2
+
+        Label:
+            text: "AGE"
+            font_size: 32
+        TextInput:
+            id: age
+            hint_text: "Enter Your AGE"
+            font_size: 32
+            multiline: False
+            background_color: 0.5,0.5,1,0.2
+        Label:
+            text: "GRADE"
+            font_size: 32
+        TextInput:
+            id: grade
+            hint_text: "Enter Your GRADE"
+            font_size: 32
+            multiline: False
+            background_color: 0.5,0.5,1,0.2
+        Label:
+            text: "HOBBY"
+            font_size: 32
+        TextInput:
+            id: hobby
+            hint_text: "Enter Your HOBBY"
+            font_size: 32
+            multiline: False
+            background_color: 0.5,0.5,1,0.2
+        Button:
+            text: "START LEARNING>>"
+            font_size: 32
+            background_color: 0,0,0,0
+            on_release:
+                root.on_validate()
+                root.manager.transition.direction = "left"
+
+<Screen2>:
+    name: "two"
+    wel:wel
+    Image:
+        source: 'images/image3.jpg'
+        allow_stretch: True
+        keep_ratio: False
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        Label:
+            id: wel
+            text: "WELCOME"
+            italic: True
+            bold: True
+            color: 1,0,0,0.8
+            font_size: 34
+        Label:
+            text: "IT'S LEARNING TIME!!"
+            font_size: 34
+            italic: True
+            color: 1,0,0,0.8
+
+
+        Button:
+            text: "NUMBERS"
+            font_size: 32
+            color: 1,0,0,0.5
+            background_color: 0,0,0,0
+            on_release:
+                app.root.current = "three"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "PRONUNCIATION"
+            font_size: 32
+            background_color: 0,0,0,0
+            color: 1,0,0,0.5
+            on_release:
+                app.root.current = "four"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "WRITING"
+            font_size: 32
+            color: 1,0,0,0.5
+            background_color: 0,0,0,0
+        Button:
+            text: "COLOURS"
+            color: 1,0,0,0.5
+            font_size: 32
+            background_color: 0,0,0,0
+        Button:
+            text: "SHAPES"
+            font_size: 32
+            color: 1,0,0,0.5
+            background_color: 0,0,0,0
+        Button:
+            text: "SONGS"
+            font_size: 32
+            color: 1,0,0,0.5
+            background_color: 0,0,0,0
+            on_release:
+                app.root.current = "eight"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "<<BACK"
+            font_size: 28
+            background_color: 0,0,0,0
+            pos_hint: {"center_x": 0.2, "center_y": 0.1}
+            on_release:
+                app.root.current = "one"
+                root.manager.transition.direction = "right"
+
+<Screen3>:
+    name: "three"
+    Image:
+        source: 'images/image9.png'
+        allow_stretch: True
+        keep_ratio: False
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width,root.height
+        Label:
+            text: "LEARN NUMBERS"
+            font_size: 36
+            italic: True
+            bold: True
+            color: 0,0,1,0.8
+        Button:
+            text: "COUNTING"
+            font_size: 34
+            color: 0,0,1,0.7
+            background_color: 0,0,0,0
+            on_release:
+                app.root.current = "nine"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "ADDITION & SUBTRACTION"
+            font_size: 34
+            color: 0,0,1,0.7
+            background_color: 0,0,0,0
+            on_release:
+                app.root.current = "nine"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "MULTIPLICATION & DIVISION"
+            font_size: 32
+            color: 0,0,1,0.7
+            background_color: 0,0,0,0
+            on_release:
+                app.root.current = "three"
+                root.manager.transition.direction = "right"
+        Button:
+            text: "<<BACK"
+            font_size: 32
+            background_color: 0,0,0,0
+            pos_hint: {"center_x": 0.2, "center_y": 0.1}
+            on_release:
+                app.root.current = "two"
+                root.manager.transition.direction = "right"
+<Screen4>:
+    name: "four"
+    Image:
+        source: 'images/image10.png'
+        allow_stretch: True
+        keep_ratio: False
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        Label:
+            text: "MASTERY OF WORDS AND PRONUNCIATION"
+            font_size: 34
+            bold: True
+            italic: True
+            color:0,1,0,0.5
+        Label:
+            text: "LUGHA YA KISWAHILI"
+            font_size: 32
+            pos_hint: {"center_x": 0.24, "center_y": 0.95}
+        Label:
+            text: "YALIYOMO:"
+            font_size: 30
+            pos_hint: {"center_x": 0.16, "center_y": 0.9}
+        Label
+            text: "1.HERUFI"
+            font_size: 24
+            pos_hint: {"center_x": 0.118, "center_y": 0.9}
+        Label:
+            text: "2.SILABI"
+            font_size: 24
+            pos_hint: {"center_x": 0.12, "center_y": 0.9}
+        Label:
+            text: "3.MANENO"
+            font_size: 24
+            pos_hint: {"center_x": 0.127, "center_y": 0.9}
+        Button:
+            text: "ANZA>>"
+            font_size: 22
+            background_color: 0,0,0,0
+        Label:
+            text: "ENGLISH LANGUAGE"
+            font_size: 32
+            pos_hint: {"center_x": 0.2, "center_y": 0.95}
+        Label:
+            text: "CONTENT:"
+            font_size: 30
+            pos_hint: {"center_x": 0.127, "center_y": 0.9}
+        Label
+            text: "1.LETTERS"
+            font_size: 24
+            pos_hint: {"center_x": 0.12, "center_y": 0.9}
+        Label:
+            text: "2.WORDS"
+            font_size: 24
+            pos_hint: {"center_x": 0.12, "center_y": 0.9}
+        Button:
+            text: "START>>"
+            font_size: 22
+            background_color: 0,0,0,0
+            on_release:
+                app.root.current = "eleven"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "<<BACK"
+            font_size: 28
+            background_color: 0,0,0,0
+            pos_hint: {"center_x": 0.2, "center_y": 0.1}
+            on_release:
+                app.root.current = "two"
+                root.manager.transition.direction = "right"
+
+<InvalidInfo>:
+    canvas.before:
+        Color:
+            rgba: (0,0,1,0.2)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    Label:
+        text : "Please enter valid information"
+        font_size: 14
+        size_hint : 0.1, 0.1
+        pos_hint : {"x" : 0.9, "top" : 0.9}
+<Screen8>:
+    name: "eight"
+
+<Screen9>:
+    name: "nine"
+    add:add
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width,root.height
+        Button:
+            id: add
+            text: "START"
+            font_size: 28
+            background_color: 0,0,1,1
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            on_release:
+                app.root.current = "three"
+                root.manager.transition.direction = "right"
+<Screen11>:
+    name: "eleven"
+    PageLayout:
+        Screen10:
+        Screen12:
+
+<Screen10>:
+    name: "ten"
+    ScrollView:
+        size_hint_y: 0.8
+        pos_hint: {'x':0, 'y':0.1}
+        do_scroll_y: True
+        do_scroll_x: False
+        StackLayout:
+            size: root.width,0
+            height: self.minimum_height
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "A"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+            Button:
+                text: "Z"
+                font_size: 22
+                color: 0,1,0,1
+                background_color: 0,0,1,1
+                size_hint: .2,.2
+<Screen12>:
+    name: "twelve"
+    Image:
+        source: 'images/image1.jpg'
+        allow_stretch: True
+        keep_ratio: False
+
+    StackLayout:
+        padding: ("20dp","20dp","20dp","20dp")
+        spacing: ("10dp", "10dp")
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "Z"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
+        Button:
+            text: "A"
+            font_size: 22
+            color: 0,0,1,1
+            background_color: 0,1,0,1
+            size_hint: .2,.2
